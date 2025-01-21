@@ -1,0 +1,9 @@
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    background-color:rgba(195, 181, 181, 0.5);
+}
+ 
