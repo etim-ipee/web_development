@@ -1,0 +1,10 @@
+.partners{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section ul{
+  list-style: none;  
+  display: inline-flex;
+  align-items: center;
+}

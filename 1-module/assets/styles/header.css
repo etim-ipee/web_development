@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    justify-content: space-between;
+} 
+nav ul{
+  list-style: none;  
+  display: inline-flex;
+}
+
+ul li{
+    margin-right: 15px;
+}
+.logo{
+    display:inline-flex;
+}
+.primary{
+    margin-left: 15px;
+    border: none;
+    border-radius: 25px;
+    padding: .8rem 1rem ;
+    width: 100px;
+}
