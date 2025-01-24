@@ -37,3 +37,10 @@ body h1 {
 button{
     margin-right: 8px;
 }
+.default{
+ border:none; 
+ border-radius: 10px; 
+ padding: .8rem 1.5rem;
+ width: 100px;
+ background-color: beige;
+}
