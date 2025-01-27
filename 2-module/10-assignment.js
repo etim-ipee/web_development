@@ -1,4 +1,4 @@
-//A function that can detect palinndromes
+//A function that can detect palindromes
 
 function isPalindrome(str) {
     // This funcion removes non-alphanumeric xters and converts to lowercase
