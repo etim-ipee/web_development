@@ -12,5 +12,5 @@ function isPalindrome(str) {
 }
 
 // Example usage:
-const input = "A man, a plan, a canal, a girl, Panama!";
+const input = "A man, a plan, a canal, Panama!";
 console.log(`Is the input a palindrome? ${isPalindrome(input)}`);
