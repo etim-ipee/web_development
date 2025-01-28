@@ -11,25 +11,28 @@ const addTodo = (event) => {
     const text = input.value.trim()
     if (text !== ""){
         const item = document.createElement("li")
+        const newId = list.children.length + 1
         item.innerHTML = `
         <div>
-            <input type='checkbox' />
+            <input type='checkbox'  />
             <label>${text}</label>
-            <button id='btn'>Delete</button>
+            <button data-id='${newId}' id='btn'>Delete</button>
         </div>
         `
         list.appendChild(item)
         input.value = ""
 
         // Get delete button
-        const button=document.getElementById('btn');
-        button.addEventListener('click',deleteTodo)
+
+        
+        const button = document.querySelector(`[data-id='${newId}']`)
+        button.addEventListener('click', () => deleteTodo(button.dataset.id))
     }
 }
-const deleteTodo = () => {
+const deleteTodo = (id) => {
     //alert("Delete functionality not implemented yet")
-    const parent = document.getElementById('btn');
-    console.log(parent.parentElement.parentElement)
-    list.removeChild(parent.parentElement.parentElement)
+    list.removeChild(document.querySelector(`[data-id='${id}']`).parentElement.parentElement)
 }
 form.addEventListener("submit", addTodo)
+
+
