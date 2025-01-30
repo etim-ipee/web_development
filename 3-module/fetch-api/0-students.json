@@ -11,6 +11,16 @@
 },{
     "firstName": "Yusuf",
     "lastName": "Ibrahim",
-    "age": "20",
+    "age": 20,
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
+},{
+    "firstName": "Bitrus",
+    "lastName": "Marcus",
+    "age": 21,
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
+},{
+    "firstName": "Grace",
+    "lastName": "Ben",
+    "age": 22,
     "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
 }]
