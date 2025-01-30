@@ -1,0 +1,17 @@
+#partners{
+    padding: 2rem;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+section ul {
+    list-style: none;
+    width: 100%;
+    display: inline-flex;
+}
+
+section ul li{
+    margin-right: 15px;
+}
