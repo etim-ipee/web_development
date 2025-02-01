@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const students = await response.json()
         for (const student of students){
             const article = document.createElement("article")
-            article.innerHTML = `
+            //create javascript templates
+            article.innerHTML = ` 
                 <p>Firstname: </p>
                 <p>${student.firstName}</p>
                 <p>Lastname: </p>

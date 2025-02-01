@@ -1,0 +1,21 @@
+[{
+    "id" : 1,
+    "todo": "plan a housing project", 
+    "completed": false
+},{
+   "id" : 2,
+    "todo": "learn react native", 
+    "completed": true
+},{
+    "id" : 3,
+    "todo": "learn javascript", 
+    "completed": true
+},{
+    "id" : 4,
+    "todo": "buy a car", 
+    "completed": true
+},{
+    "id" : 5,
+    "todo": "buy a plane", 
+    "completed": false
+}]
