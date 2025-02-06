@@ -9,10 +9,11 @@ body {
   }
   
   .container {
-    background: white;
+    background: rgb(171, 140, 140);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
   }
   
   h1 {
@@ -51,18 +52,19 @@ body {
   }
   
   li {
-    background: #eee;
+    background: #e4dede;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+    align-items:center;
+    
   }
   
   li div {
     display: flex;
-    align-items: center;
+    align-items:center;
   }
   
   li input[type="checkbox"] {
@@ -75,6 +77,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: left 50px;
   }
   
   li button:hover {

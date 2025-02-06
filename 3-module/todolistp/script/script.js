@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <div>
             <input type="checkbox" />
             <label>${text}</label>
-          
-          <button data-id='${newId}' id-data='button'>Delete</button>
           </div>
+          <button data-id='${newId}' id-data='button'>Delete</button>
+          
         `;
   
         // Add event listener to the delete button
