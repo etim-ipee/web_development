@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  #wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  article {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  article p {
+    margin: 10px 0;
+  }
+  
+  article ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  

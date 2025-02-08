@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const students = await response.json()
         for (const student of students){
             const article = document.createElement("article")
-            //create javascript templates
+            //create javascript templates literal
             article.innerHTML = ` 
                 <p>Firstname: </p>
                 <p>${student.firstName}</p>
@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p>Age: </p>
                 <p>${student.age}</p>
                 <p>Subject: </p>
-                <ul>
+               
                     ${student.subjects.map(item => `<li>${item}</li>`)}
-                </ul>
+                
             `
             wrapper.appendChild(article)    
         }

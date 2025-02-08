@@ -1,31 +1,62 @@
 [{
-    "id": 1,
+    "id": "001",
     "firstName": "John",
     "lastName": "Bruce",
     "age": 19,
-    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
+    "subjects": ["Maths", "English", "Biology",  "Computer Sci.","Physics","Chemistry", "C.R.S"]
 },{
     "id":2,
     "firstName": "Blessing",
     "lastName": "Peter",
     "age": 18,
-    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]   
+    "subjects": ["Maths", "English", "Economics", "Commerce", "Agric Sci.", "C.R.S", "Government"]   
 },{
     "id":3,
     "firstName": "Yusuf",
     "lastName": "Ibrahim",
     "age": 20,
-    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
+    "subjects": ["Maths", "English", "Biology", "Economics", "Agric. sci.", "I.R.S", "Government"]
 },{ 
     "id":4,
     "firstName": "Bitrus",
     "lastName": "Marcus",
     "age": 21,
-    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci.", "Agric Sci.", "C.R.S"]
 },{
     "id":5,
     "firstName": "Grace",
     "lastName": "Ben",
     "age": 22,
-    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci."]
-}]
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci.", "Agric Sci.", "C.R.S"]
+},{ 
+    "id":6,
+    "firstName": "Stephen",
+    "lastName": "Mark",
+    "age": 23,
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci.", "Agric Sci.", "C.R.S"]
+},{
+    "id":7,
+    "firstName": "Joy",
+    "lastName": "Adams",
+    "age": 24,
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci.", "Agric Sci.", "C.R.S"]
+},{
+    "id":8,
+    "firstName": "Adamu",
+    "lastName": "Abdul",
+    "age": 20,
+    "subjects": ["Maths", "English", "Biology", "Economics", "Agric. sci.", "I.R.S", "Government"]
+},{ 
+    "id":9,
+    "firstName": "Ubong",
+    "lastName": "Okon",
+    "age": 18,
+    "subjects": ["Maths", "English", "Economics", "Commerce", "Agric Sci.", "C.R.S", "Literature"]
+},{
+    "id":10,
+    "firstName": "Imoh",
+    "lastName": "Udofia",
+    "age": 20,
+    "subjects": ["Maths", "English", "Biology", "Economics", "Computer Sci.", "Agric Sci.", "C.R.S"]
+}
+]
