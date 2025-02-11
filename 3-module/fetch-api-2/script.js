@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const wrapper = document.getElementById("wrapper");
+   
+
+    // Add the heading
+  const heading = document.createElement("h2");
+  heading.textContent = "Students Information";
+  wrapper.prepend(heading);
+  
+  
+  
+  
   
     try {
       const response = await fetch("http://localhost:5500/3-module/fetch-api/0-students.json");
@@ -10,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   
         // Create HTML template using JavaScript template literals
         article.innerHTML = `
+
           <p><strong>StudentID:</strong> ${student.id}</p>
           <p><strong>Firstname:</strong> ${student.firstName}</p>
           <p><strong>Lastname:</strong> ${student.lastName}</p>
