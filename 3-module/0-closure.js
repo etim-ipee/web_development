@@ -1,8 +1,8 @@
 // a funcntion that adopts closure technique
 const createCounter =() => {
-    let index = 0
+    let index = 7
     return () => {
-        return index + 2
+        return index - 2
     }
 }
 const count = createCounter()
