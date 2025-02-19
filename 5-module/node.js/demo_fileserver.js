@@ -1,6 +1,6 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
+var http = require('http');//http: This module is required to create an HTTP server.
+var url = require('url');//url: This module is used to parse the URL of the incoming request.
+var fs = require('fs');//fs: This module is used to interact with the file system, allowing the server to read files.
 
 http.createServer(function (req, res) {
   var q = url.parse(req.url, true);
@@ -15,3 +15,19 @@ http.createServer(function (req, res) {
     return res.end();
   });
 }).listen(5500);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
