@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <ul id="todo-list"></ul>
+  <input type="text" id="new-todo" placeholder="New to-do">
+  <button onclick="addTodo()">Add</button>
+
+  <script>
+    async function fetchTodos() {
+      const response = await fetch('/todos');
+      const todos = await response.json();
+      const todoList = document.getElementById('todo-list');
+      todoList.innerHTML = '';
+      todos.forEach(todo => {
+        const li = document.createElement('li');
+        li.textContent = todo.title;
+        todoList.appendChild(li);
+      });
+    }
+
+    async function addTodo() {
+      const newTodoInput = document.getElementById('new-todo');
+      const newTodo = {
+        id: Date.now(),
+        title: newTodoInput.value,
+        completed: false
+      };
+
+      await fetch('/todos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newTodo)
+      });
+
+      newTodoInput.value = '';
+      fetchTodos();
+    }
+
+    fetchTodos();
+  </script>
+</body>
+</html>
