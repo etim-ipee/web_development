@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+<p class="info">You can use Tag Name method to find HTML Elements</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+const z = document,getElementByClassName("info");
+
+
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 2) inside "main" is: ' + y[2].innerHTML;
+</script>                                                                
+</body>
+</html>
