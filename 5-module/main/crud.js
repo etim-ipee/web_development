@@ -1,12 +1,17 @@
-const { error } = require('console');
 const express = require('express')
 const fs = require('fs');
-const { json } = require('stream/consumers');
+const cors = require('cors')
 
 const app = express()
 
-app.post('/', async (req, res) => {
-    const data = req.data;
+app.use([
+    express.json(),
+    express.urlencoded({extended: true}),
+    cors()
+])
+
+app.post('/', (req, res) => {
+    const data = req.body;
 
     if (!data) {
         return res.status(400).json({error: 'No data'})
@@ -16,15 +21,29 @@ app.post('/', async (req, res) => {
         return res.status(400).json({error: 'Missing credentials'})
     }
 
-    const existingData = await fs.readFileSync('data.json', 'utf8')
-    const parseData = JSON.parse(existingData)
-    const isDuplicate = parseData.some(item => item.email === data.email)
-    if (isDuplicate) {
-        return res.status(400),json({error: 'Email already exists'})
+    let parsedData = []
+
+    try {
+        const existingData = fs.readFileSync('data.json', 'utf8')
+        parsedData = JSON.parse(existingData)
+        const isDuplicate = parsedData.some(item => item.email === data.email)
+        if (isDuplicate) {
+            return res.status(400),json({error: 'Email already exists'})
+        }
+       parsedData.push(data)
+       fs.writeFileSync('data.json', JSON.stringify(parsedData, null, 2))
+       res.status(201).json({message: 'Data created successfully'})
+
+    } catch (error) {
+
+        fs.writeFileSync('data.json', JSON.stringify(parsedData, null, 2))
+
+        res.status(201).json({message: 'Data created successfully'})
     }
-    parsedData.push(data)
-    await fs.writeFileSync('data.json', JSON.stringify(parsedData, null, 2))
 
-    res.status(201).json({message: 'Data created successfully'})
+})
 
-}) 
+
+app.listen(5000, () => {
+    console.log('Server is running')
+})
