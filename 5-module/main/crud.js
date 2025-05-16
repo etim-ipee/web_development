@@ -2,12 +2,13 @@ const { error } = require('console');
 const express = require('express')
 const fs = require('fs');
 const cors = require('cors')
-
 const app = express()
 
 app.use(express.json());
+
+
 // POST Endpoint-Create new record
-app.post('/', async (req, res) => {
+app.post('/create', async (req, res) => {
     const data = req.body;
 
     console.log(data)
@@ -20,17 +21,13 @@ app.post('/', async (req, res) => {
         return res.status(400).json({error: 'Missing credentials'})
     }
     
-
     let existingData = [];
 if (fs.existsSync('data.json')) {
-    existingData = JSON.parse(await fs.readFileSync('data.json', 'utf8'));
+    existingData = JSON.parse(await fs.promises.readFile('data.json', 'utf8'));
 } else {
     fs.writeFileSync('data.json', JSON.stringify([], null, 2));
 }
-
-
     res.status(201).json({message: 'Data created successfully'})
-
 })
 
 // GET Endpoint - Search record
@@ -46,7 +43,7 @@ app.get('/search', async (req, res) => {
     const record = parsedData.find(item => item.email === email);
 
     if (!record) {
-        return res.status(404).json({ error: 'Record not found' });
+        return res.status(404).json({ error: 'Record not found!' });
     }
 
     res.status(200).json(record);
@@ -65,7 +62,7 @@ app.put('/update', async (req, res) => {
     const index = parsedData.findIndex(item => item.email === email);
 
     if (index === -1) {
-        return res.status(404).json({ error: 'Record not found' });
+        return res.status(404).json({ error: 'No such record found!' });
     }
 
     // Update the record
@@ -88,14 +85,12 @@ app.delete('/delete', async (req, res) => {
     const filteredData = parsedData.filter(item => item.email !== email);
 
     if (filteredData.length === parsedData.length) {
-        return res.status(404).json({ error: 'Record not found' });
+        return res.status(404).json({ error: 'Record not found!' });
     }
 
     await fs.writeFileSync('data.json', JSON.stringify(filteredData, null, 2));
     res.status(200).json({ message: 'Record deleted successfully' });
 });
-
-
 
 app.get('/', (req, res) => {
     res.send("Hello world! Welcome")
@@ -104,5 +99,5 @@ app.use([
     express.urlencoded({extended: true})
 ])
 app.listen(6000, () => {
-    console.log('Server is running')
+    console.log('Server is running on port 6000')
 })
