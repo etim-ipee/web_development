@@ -7,7 +7,7 @@ const server = createServer((req, res) => {
          res.writeHead(201, {"content-type": 'text/plain'})
          res.end("File created")
     }else if (req.method === "GET" && req.url === "/read"){
-        const note = fs.readFile('./test.txt', () => {})
+        const note = fs.readFileSync('./test.txt','utf8', () => {})
         console.log(note)
         res.writeHead(200, {"content-type": 'text/plain'})
         res.end(note)   
