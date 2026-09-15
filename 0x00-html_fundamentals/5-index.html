@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images & Figures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }s
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Image Gallery</h1>
+  <div class="gallery">
+
+    <!-- Image 1: Proper alt text -->
+    <img src="assets/mountain.jpg" alt="Snow-covered mountain peak under a clear blue sky" width="300" height="200">
+
+    <!-- Image 2: Wrapped in figure with figcaption -->
+    <figure>
+      <img src="assets/beach.webp" alt="Golden sandy beach with gentle waves">
+      <figcaption>A peaceful beach at sunset</figcaption>
+    </figure>
+
+    <!-- Image 3: With width and height attributes -->
+    <img src="assets/buildings.jpg" alt="Modern city skyline with skyscrapers" width="300" height="200">
+
+    <!-- Image 4: Demonstrating good vs bad alt text -->
+    <!-- Bad alt text -->
+    <img src="assets/dog.webp" alt="image123" width="200" height="150">
+    <!-- Good alt text -->
+    <img src="assets/browndog.webp" alt="Brown Labrador retriever playing fetch in a park" width="200" height="150">
+
+    <!-- Image 5: Picture element with multiple sources -->
+    <picture>
+      <source srcset="assets/forest-large.jpeg" media="(min-width: 200px)">
+      <source srcset="assets/forest-medium.jpg" media="(min-width: 100px)">
+      <img src="assets/forest-small.jpg" alt="Dense green forest with tall trees" width="300" height="200">
+    </picture>
+
+    <!-- Image 6: Lazy loading below-the-fold -->
+    <img src="assets/waterfall.jpg" alt="Tall waterfall cascading into a rocky pool" loading="lazy">
+  </div>
+  <a href="4-index.html">Back to Navigation page</a>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+  <style>
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+      font-weight: bold;
+    }
+    fieldset {
+      margin-top: 1em;
+      padding: 0.5em;
+      border: 1px solid #aaa;
+    }
+    legend {
+      font-weight: bold;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/submit-contact" method="post">
+    <!-- Text input -->
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50">
+
+    <!-- Email input -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Password input with pattern -->
+    <label for="password">Password (must contain letters and numbers):</label>
+    <input type="password" id="password" name="password" 
+           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+           title="Minimum 8 characters, at least one letter and one number" required>
+
+    <!-- Number input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100" required>
+
+    <!-- Date input -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <!-- Tel input with pattern -->
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" 
+           pattern="^\+?[0-9]{10,15}$" 
+           title="Enter a valid phone number with country code">
+
+    <!-- Radio buttons -->
+    <fieldset>
+      <legend>Preferred Contact Method:</legend>
+      <label for="contact-email">
+        <input type="radio" id="contact-email" name="contact-method" value="email" required>
+        Email
+      </label>
+      <label for="contact-phone">
+        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+        Phone
+      </label>
+    </fieldset>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Topics of Interest:</legend>
+      <label for="topic-ai">
+        <input type="checkbox" id="topic-ai" name="topics" value="ai">
+        Artificial Intelligence
+      </label>
+      <label for="topic-web">
+        <input type="checkbox" id="topic-web" name="topics" value="web">
+        Web Development
+      </label>
+      <label for="topic-data">
+        <input type="checkbox" id="topic-data" name="topics" value="data">
+        Data Science
+      </label>
+    </fieldset>
+
+    <!-- Select dropdown with optgroup -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <optgroup label="Africa">
+        <option value="nigeria">Nigeria</option>
+        <option value="ghana">Ghana</option>
+      </optgroup>
+      <optgroup label="Europe">
+        <option value="uk">United Kingdom</option>
+        <option value="germany">Germany</option>
+      </optgroup>
+    </select>
+
+    <!-- Textarea -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" cols="40" maxlength="500"></textarea>
+
+    <!-- File input -->
+    <label for="resume">Upload Resume (PDF only):</label>
+    <input type="file" id="resume" name="resume" accept=".pdf">
+
+    <!-- Range input -->
+    <label for="satisfaction">Satisfaction Level:</label>
+    <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+
+    <!-- Color input -->
+    <label for="favcolor">Favorite Color:</label>
+    <input type="color" id="favcolor" name="favcolor">
+
+    <!-- Hidden input -->
+    <input type="hidden" id="formid" name="formid" value="contact123">
+
+    <!-- Submit and Reset buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+<a href="4-index.html">Back to Navigation page</a>
+</body>
+</html>
+

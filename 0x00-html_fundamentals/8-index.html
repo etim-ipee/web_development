@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Elements</title>
+    <style>
+  .video-frame {
+    width: 300px;
+    height: 150px;
+    border: none;          /* removes border */
+    border-radius: 8px;    /* optional: rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* optional: subtle shadow */
+  }
+</style>
+</head>
+<body>
+  <h1>Media Embedding Examples</h1>
+
+  <!-- Video element -->
+  <h2>Video Example</h2>                                                                                                                                                                                                                 
+  <video controls poster="poster.jpg" width="640" height="360">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    <p>Your browser does not support HTML5 video. 
+       <a href="video.mp4">Download the video</a> instead.</p>                                                                                                                                                                                                                                                                                                                                                                           
+  </video>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+
+  <!-- Audio element -->
+  <h2>Audio Example</h2>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    <p>Your browser does not support HTML5 audio. 
+       <a href="audio.mp3">Download the audio</a> instead.</p>
+  </audio>
+
+  <!-- YouTube iframe -->
+  <h2>YouTube Video Embed</h2>
+  <iframe 
+    class="video-frame"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    title="YouTube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen">
+</iframe>
+
+  <!-- Google Maps iframe -->
+  <h2>Google Map Embed</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.81627927975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d3f9f8f8f8f8!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sau!4v1631540000000!5m2!1sen!2sau" 
+    width="300" 
+    height="150" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Google Map of Melbourne, Australia">
+  </iframe>
+
+  <!-- Accordion with details/summary -->
+  <h2>Accordion Example</h2>
+  <details>
+    <summary>Click to expand more information</summary>
+    <p>This is an accordion section created using the &lt;details&gt; and &lt;summary&gt; elements. No JavaScript required!</p>
+  </details>
+  <a href="4-index.html">Back to Navigation page</a>
+</body>
+</html>
