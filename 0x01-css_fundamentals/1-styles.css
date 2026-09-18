@@ -1,0 +1,89 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Element selector */
+p {
+  color: #333;
+}
+
+/* Class selector */
+.highlight {
+  background-color: yellow;
+}
+
+/* ID selector */
+#unique {
+  color: red;
+  font-weight: bold;
+}
+
+/* Descendant selector */
+.container p {
+  color: blue;
+}
+
+/* Child selector */
+.container > span > p {
+  color: green;
+}
+
+/* Adjacent sibling selector */
+h3 + p {
+  background-color: lightblue;
+}
+
+/* General sibling selector */
+h3 ~ p {
+  border: 1px solid orange;
+}
+
+/* Attribute selector */
+a[target="_blank"] {
+  color: purple;
+  text-decoration: underline;
+}
+
+/* Pseudo-classes */
+button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+input:focus {
+  border: 2px solid #e74c3c;
+}
+
+ul li:nth-child(2) {
+  color: teal;
+}
+
+ul li:not(:nth-child(2)) {
+  font-style: italic;
+}
+
+/* Pseudo-elements */
+.pseudo-demo::before {
+  content: "👉 ";
+  color: green;
+}
+
+.pseudo-demo::after {
+  content: " 👈";
+  color: red;
+}
+
+.pseudo-demo::first-letter {
+  font-size: 200%;
+  color: blue;
+}

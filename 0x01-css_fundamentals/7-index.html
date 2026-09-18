@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devloper Portfolio</title>
+    <link rel="stylesheet" href="../0x01-css_fundamentals/7-styles.css">
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">DevName</a>
+            
+            <!-- Hidden Checkbox for Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Toggle Navigation Menu">
+            
+            <!-- Hamburger Button (Visible on Mobile) -->
+            <label for="menu-toggle" class="hamburger-btn" aria-label="Open Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="about" class="hero">
+            <div class="container hero-content">
+                <h1>Building Modern & Responsive Web Experiences</h1>
+                <p>I am a Frontend Developer specializing in responsive design, fluid typography, and clean user interfaces.</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <!-- Responsive Grid Container -->
+                <div class="projects-grid">
+                    
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <!-- Responsive Image using srcset -->
+                            <img 
+                                src="https://picsum.photos/id/1/600/400" 
+                                srcset="https://picsum.photos/id/1/400/267 400w, https://picsum.photos/id/1/800/533 800w"
+                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                alt="E-Commerce Dashboard Screenshot" 
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">E-Commerce Platform</h3>
+                            <p class="card-desc">A fully responsive dashboard UI with interactive data visualization modules.</p>
+                            <a href="#" class="card-link">Learn More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img 
+                                src="https://picsum.photos/id/16/600/400" 
+                                srcset="https://picsum.photos/id/16/400/267 400w, https://picsum.photos/id/16/800/533 800w"
+                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                alt="Analytics App Screenshot" 
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Analytics Application</h3>
+                            <p class="card-desc">Real-time performance metric monitoring tool built for touch devices.</p>
+                            <a href="#" class="card-link">Learn More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <img 
+                                src="https://picsum.photos/id/180/600/400" 
+                                srcset="https://picsum.photos/id/180/400/267 400w, https://picsum.photos/id/180/800/533 800w"
+                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                alt="Creative Agency Website Screenshot" 
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Creative Portfolio</h3>
+                            <p class="card-desc">Minimalist layout designed to highlight photography and digital media.</p>
+                            <a href="#" class="card-link">Learn More &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p>Looking to collaborate on a new project or need a responsive design consultation?</p>
+                <a href="mailto:hello@example.com" class="btn">Send an Email</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Developer Portfolio. Built mobile-first.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

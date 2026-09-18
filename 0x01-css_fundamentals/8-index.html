@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom Propeties & Theming</title>
+    <link rel="stylesheet" href="../0x01-css_fundamentals/8-styles.css">
+</head>
+<body>
+  <div class="container">
+        <!-- HEADER WITH THEME TOGGLE BUTTON -->
+        <header class="header">
+            <h1>Theme Switcher</h1>
+            
+            <!-- Inline JavaScript snippet toggling the data-theme attribute -->
+            <button 
+                class="theme-btn" 
+                onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')">
+                Toggle Theme
+            </button>
+        </header>
+
+        <!-- CONTENT SECTION -->
+        <main>
+            <article class="card">
+                <h2>Dynamic CSS Variables</h2>
+                <p>This layout uses CSS variables defined in <code>:root</code> for colors, spacing, and typography. No structural HTML changes are made when switching modes.</p>
+                <p>When the button above is clicked, the <code>data-theme</code> attribute on the root <code>&lt;html&gt;</code> element updates dynamically, triggering the <code>[data-theme="dark"]</code> selector to override the color variables smoothly.</p>
+            </article>
+
+            <article class="card">
+                <h2>Smooth Color Transitions</h2>
+                <p>A transition property applied to background and text colors ensures that the visual change is seamless and comfortable for the eyes.</p>
+            </article>
+        </main>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Completely Styled Page </title>
+  <link rel="stylesheet" href="../0x01-css_fundamentals/9-styles.css">
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#hero">Home</a>
+      <a href="#article">Article</a>
+      <a href="#data-table">Data Table</a>
+      <a href="#form">Form</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Welcome to The Complete Semantic HTML </h1>
+      <p>This page demonstrates <strong>production-ready</strong> semantic HTML5 elements, designed to show best practices in accessibility, structure, and clarity.</p>
+    </section>
+
+    <!-- Article -->
+    <article id="article">
+      <h2>Understanding Semantic HTML</h2>
+      <p>Semantic HTML provides meaning to web content. For example, using <abbr title="HyperText Markup Language">HTML</abbr> tags correctly improves accessibility and SEO.</p>
+      <p>It ensures that assistive technologies can interpret content properly, making the web more inclusive.</p>
+      <h3>Key Benefits</h3>
+      <ul>
+        <li>Improved accessibility</li>
+        <li>Better SEO</li>
+        <li>Cleaner code</li>
+      </ul>
+      <blockquote cite="https://www.w3.org/TR/html52/">
+        “Semantic elements clearly describe their meaning in a human- and machine-readable way.”
+      </blockquote>
+      <p>Remember, writing semantic HTML is not just about compliance—it’s about creating a better web for everyone.</p>
+    </article>
+
+    <!-- Data Table -->
+    <section id="data-table">
+      <h2>HTML Elements Overview</h2>
+      <table>
+        <caption>Common Semantic Elements</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Purpose</th>
+            <th>Example Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;header&gt;</td>
+            <td>Introductory content</td>
+            <td>Page or section header</td>
+          </tr>
+          <tr>
+            <td>&lt;article&gt;</td>
+            <td>Self-contained content</td>
+            <td>Blog post</td>
+          </tr>
+          <tr>
+            <td>&lt;time&gt;</td>
+            <td>Machine-readable date/time</td>
+            <td><time datetime="2026-09-15">September 15, 2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Aside -->
+    <aside>
+      <h2>Related Resources</h2>
+      <dl>
+        <dt>W3C HTML Spec</dt>
+        <dd><a href="https://www.w3.org/TR/html52/" target="_blank">Official documentation</a></dd>
+        <dt>MDN Web Docs</dt>
+        <dd><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Learning resources</a></dd>
+      </dl>
+    </aside>
+
+    <!-- Figure -->
+    <figure>
+      <img src="semantic-html.png" alt="Diagram showing semantic HTML structure" width="600">
+      <figcaption>A diagram illustrating semantic HTML layout.</figcaption>
+    </figure>
+
+    <!-- Form -->
+    <section id="form">
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <label for="newsletter">Subscribe to newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter">
+
+        <label for="range">Rate your HTML knowledge (1-10):</label>
+        <input type="range" id="range" name="range" min="1" max="10">
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Media -->
+    <section>
+      <h2>Media Example</h2>
+      <video controls width="480" poster="poster.jpg">
+        <source src="demo.mp4" type="video/mp4">
+        <source src="demo.webm" type="video/webm">
+        <p>Your browser does not support video. <a href="demo.mp4">Download the video</a>.</p>
+      </video>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>What is semantic HTML?</summary>
+        <p>Semantic HTML uses elements that convey meaning about their content, improving accessibility and SEO.</p>
+      </details>
+      <details>
+        <summary>Why is accessibility important?</summary>
+        <p>Accessibility ensures that all users, including those with disabilities, can interact with web content effectively.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      Contact us: <a href="mailto:info@example.com">info@example.com</a><br>
+      Phone: +123-456-7890<br>
+      Location: Abuja, Nigeria
+    </address>
+    <p>&copy; <time datetime="2026">2026</time> Semantic HTML Demo</p>
+  </footer>
+</body>
+</html>

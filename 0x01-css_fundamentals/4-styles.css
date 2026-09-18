@@ -1,0 +1,64 @@
+
+    /* 🎨 Define palette with CSS variables */
+    :root {
+      --primary: #3498db;        /* Hex */
+      --secondary: rgb(231, 76, 60); /* RGB */
+      --accent: rgba(46, 204, 113, 0.8); /* RGBA */
+      --dark-bg: hsl(210, 30%, 10%);     /* HSL */
+      --light-bg: hsla(0, 0%, 95%, 1);   /* HSLA */
+      --text-light: #ffffff;
+      --text-dark: #222222;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      padding: 2rem;
+      min-height: 50vh;
+    }
+
+    /* 🌑 Dark section */               
+    .dark-section {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    /* ☀️ Light section */
+    .light-section {
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+    }
+
+    /* 🎨 Gradient examples */
+    .linear-gradient-box {
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      padding: 2rem;
+      margin: 1rem 0;
+      color: var(--text-light);
+    }
+
+    .radial-gradient-box {
+      background: radial-gradient(circle, var(--accent), var(--secondary));
+      padding: 2rem;
+      margin: 1rem 0;
+      color: var(--text-light);
+    }
+
+    /* 🖼 Background image controls */
+    .bg-image-box {
+      background-image: url('https://picsum.photos/600/400');
+      background-size: cover;       /* Options: cover, contain, auto */
+      background-position: center;  /* Options: top, bottom, left, right */
+      background-repeat: no-repeat; /* Options: repeat, repeat-x, repeat-y */
+      padding: 4rem;
+      margin: 1rem 0;
+      color: var(--text-light);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  

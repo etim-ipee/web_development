@@ -1,0 +1,58 @@
+/* Base styling */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1rem; /* relative unit */
+  line-height: 1.7;
+  color: #333;
+  background-color: #fafafa;
+  padding: 2rem;
+}
+
+/* Title */
+.title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+/* Meta info */
+.meta {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.author {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Intro paragraph with drop cap */
+.intro::first-letter {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+
+/* General paragraphs */
+.blog-article p {
+  margin-bottom: 1.5rem;
+}
+
+/* Demonstrating text-decoration and transform */
+.blog-article p:nth-of-type(3) {
+  text-decoration: overline;
+  text-transform: capitalize;
+  letter-spacing: 0.02rem;
+}

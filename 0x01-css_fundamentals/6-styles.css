@@ -1,0 +1,229 @@
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    /* ========================================
+       1. PHOTO GALLERY
+       ======================================== */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* ========================================
+       2. HOLY GRAIL LAYOUT
+       ======================================== */
+
+    .holy-grail {
+      display: grid;
+
+      /* Named grid lines */
+      grid-template-columns:
+        [sidebar-start] 200px
+        [sidebar-end main-start] 1fr
+        [main-end aside-start] 200px
+        [aside-end];
+
+      grid-template-rows:
+        [header-start] 80px
+        [header-end content-start] auto
+        [content-end footer-start] 60px
+        [footer-end];
+
+      gap: 15px;
+      min-height: 500px;
+    }
+
+    .hg-header {
+      grid-column: sidebar-start / aside-end;
+      grid-row: header-start / header-end;
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .hg-nav {
+      grid-column: sidebar-start / sidebar-end;
+      grid-row: content-start / content-end;
+      background: #ddd;
+      padding: 20px;
+    }
+
+    .hg-main {
+      grid-column: main-start / main-end;
+      grid-row: content-start / content-end;
+      background: rgb(207, 197, 197);
+      padding: 20px;
+    }
+
+    .hg-aside {
+      grid-column: aside-start / aside-end;
+      grid-row: content-start / content-end;
+      background: #ddd;
+      padding: 20px;
+    }
+
+    .hg-footer {
+      grid-column: sidebar-start / aside-end;
+      grid-row: footer-start / footer-end;
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    /* ========================================
+       3. ASYMMETRIC MAGAZINE LAYOUT
+       ======================================== */
+
+    .magazine {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 180px 220px 180px;
+
+      grid-template-areas:
+        "hero hero feature feature"
+        "hero hero article sidebar"
+        "small small article sidebar";
+
+      gap: 15px;
+    }
+
+    .magazine .hero {
+      grid-area: hero;
+      background: #264653;
+      color: white;
+      padding: 25px;
+    }
+
+    .magazine .feature {
+      grid-area: feature;
+      background: #e9c46a;
+      padding: 25px;
+    }
+
+    .magazine .article {
+      grid-area: article;
+      background: #f4a261;
+      padding: 25px;
+    }
+
+    .magazine .sidebar {
+      grid-area: sidebar;
+      background: #2a9d8f;
+      color: white;
+      padding: 25px;
+    }
+
+    .magazine .small {
+      grid-area: small;
+      background: #e76f51;
+      color: white;
+      padding: 25px;
+    }
+
+    /* ========================================
+       SPANNING DEMONSTRATION
+       ======================================== */
+
+    .span-demo {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 100px;
+      gap: 10px;
+    }
+
+    .span-demo div {
+      background: #6c63ff;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .span-demo .wide {
+      grid-column: span 2;
+    }
+
+    .span-demo .tall {
+      grid-row: span 2;
+    }
+
+    /* ========================================
+       RESPONSIVE DESIGN
+       ======================================== */
+
+    @media (max-width: 768px) {
+      /* Gallery remains responsive */
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* Holy Grail collapses to one column */
+      .holy-grail {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .hg-header,
+      .hg-nav,
+      .hg-main,
+      .hg-aside,
+      .hg-footer {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      /* Magazine becomes simpler on smaller screens */
+      .magazine {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "hero hero"
+          "feature feature"
+          "article sidebar"
+          "small small";
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .magazine {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "hero"
+          "feature"
+          "article"
+          "sidebar"
+          "small";
+      }
+    }
+  
