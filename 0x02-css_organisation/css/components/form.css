@@ -1,0 +1,46 @@
+/* Contact Section */
+.contact {
+  padding: 80px 10%;
+  text-align: center;
+  background: var(--bg-main);
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  border: 1px solid var(--border-input);
+  border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+}
+
+form button {
+  background: var(--primary);
+  color: var(--primary-text);
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background: var(--primary-hover);
+}
+

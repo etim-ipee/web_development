@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="library-header">
+    <h1 class="library-header__title">Component Library</h1>
+    <button class="button button--secondary" id="themeToggle">Toggle Dark Mode</button>
+  </header>
+
+  <main class="library-content">
+
+    <!-- Section: Buttons -->
+    <section class="component-group">
+      <h2 class="component-group__title">Buttons</h2>
+      <div class="component-group__preview">
+        <button class="button button--primary">Primary Button</button>
+        <button class="button button--secondary">Secondary Button</button>
+        <button class="button button--outline">Outline Button</button>
+        <button class="button button--primary" disabled>Disabled Button</button>
+      </div>
+    </section>
+
+    <!-- Section: Cards -->
+    <section class="component-group">
+      <h2 class="component-group__title">Cards</h2>
+      <div class="component-group__preview">
+        
+        <!-- Standard Card -->
+        <article class="card">
+          <h3 class="card__title">Feature Card</h3>
+          <p class="card__body">Lightning-fast execution speed ensuring seamless operation under heavy load.</p>
+          <a href="#" class="button button--primary button--full-width">Learn More</a>
+        </article>
+
+        <!-- Featured / Selected Pricing Card -->
+        <article class="pricing-card pricing-card--featured">
+          <span class="pricing-card__badge">Popular</span>
+          <h3 class="pricing-card__title">Professional</h3>
+          <div class="pricing-card__price">$49<span class="pricing-card__period">/mo</span></div>
+          <p class="pricing-card__body">Ideal for growing teams needing advanced collaboration features.</p>
+          <button class="button button--primary button--full-width">Choose Plan</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section: Form Inputs -->
+    <section class="component-group">
+      <h2 class="component-group__title">Form Inputs</h2>
+      <div class="component-group__preview">
+        <form class="form" onsubmit="event.preventDefault();">
+          
+          <div class="form__group">
+            <label class="form__label" for="username">Full Name</label>
+            <input type="text" id="username" class="form__input" placeholder="e.g. Alex Morgan" required />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="email">Email Address</label>
+            <input type="email" id="email" class="form__input" placeholder="alex@example.com" required />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="role">Select Role</label>
+            <select id="role" class="form__select">
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="manager">Product Manager</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="message">Message</label>
+            <textarea id="message" class="form__textarea" rows="4" placeholder="Write your message..."></textarea>
+          </div>
+
+          <button type="submit" class="button button--primary">Submit Form</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Simple theme switcher
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+    });
+  </script>
+</body>
+</html>

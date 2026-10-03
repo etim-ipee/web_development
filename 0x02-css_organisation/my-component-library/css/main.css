@@ -1,0 +1,7 @@
+/* Imports keep code modular and readable */
+/* Main imports all modular files*/
+@import "variables.css";
+@import "base.css";
+@import "button.css";
+@import "card.css";
+@import "form.css";

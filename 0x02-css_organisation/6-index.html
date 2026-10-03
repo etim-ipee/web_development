@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+    <body>
+<!-- Header Block -->
+    <header class="header">
+        <div class="header__logo">Brand</div>
+        <nav class="header__nav">
+            <a href="#features" class="header__link">Features</a>
+            <a href="#pricing" class="header__link">Pricing</a>
+            <a href="#contact" class="header__link">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Transform Your Workflow Today</h1>
+        <p>Our powerful platform helps teams collaborate faster, automate tasks, and reach goals efficiently.</p>
+        <a href="#pricing" class="btn">Get Started</a>
+    </section>
+
+    
+    <section class="features" id="features">
+        <h2>Our Features</h2>
+        <div class="feature-container">
+            <div class="card">
+                <h3>High Performance</h3>
+                <p>Lightning-fast execution speed ensuring seamless operation even under heavy load.</p>
+            </div>
+            <div class="card">
+                <h3>Intuitive Design</h3>
+                <p>Designed with user experience in mind, requiring zero training to get started.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Security</h3>
+                <p>Enterprise-grade encryption and security protocols to keep your data safe 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="pricing" id="pricing">
+        <h2>Simple Pricing</h2>
+        <div class="pricing-container">
+            <div class="price-box">
+                <div>
+                    <h3>Starter</h3>
+                    <div class="price">$19/mo</div>
+                    <p>Perfect for individuals and small projects getting off the ground.</p>
+                </div>
+                <button onclick="selectPlan('Starter')">Choose Plan</button>
+            </div>
+            <div class="price-box selected">
+                <div>
+                    <h3>Professional</h3>
+                    <div class="price">$49/mo</div>
+                    <p>Ideal for growing teams needing advanced collaboration features.</p>
+                </div>
+                <button onclick="selectPlan('Professional')">Choose Plan</button>
+            </div>
+            <div class="price-box">
+                <div>
+                    <h3>Enterprise</h3>
+                    <div class="price">$99/mo</div>
+                    <p>Full-featured solution tailored for large teams and organizations.</p>
+                </div>
+                <button onclick="selectPlan('Enterprise')">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="contact" id="contact">
+        <h2>Get in Touch</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <div id="feedback" class="feedback-message">Message sent successfully! We will get back to you soon.</div>
+        </form>
+    </section>
+
+   
+    <footer>
+        <p>&copy; 2026 Brand Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

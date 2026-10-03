@@ -1,0 +1,286 @@
+/* ==========================================================================
+   CSS Custom Properties (Theme Tokens)
+   ========================================================================== */
+:root {
+  --primary: #1e3a8a;
+  --primary-hover: #163172;
+  --primary-text: #ffffff;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --bg-main: #ffffff;
+  --bg-alt: #f9f9f9;
+  --bg-hero: #f4f4f4;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --border-color: #dddddd;
+  --border-input: #cccccc;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-text: #ffffff;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --bg-main: #0f172a;
+  --bg-alt: #1e293b;
+  --bg-hero: #1e293b;
+  --bg-card: #1e293b;
+  --bg-input: #334155;
+  --border-color: #334155;
+  --border-input: #475569;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --primary-text: #ffffff;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --bg-main: #0f172a;
+    --bg-alt: #1e293b;
+    --bg-hero: #1e293b;
+    --bg-card: #1e293b;
+    --bg-input: #334155;
+    --border-color: #334155;
+    --border-input: #475569;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   Block: Header
+   ========================================================================== */
+.header {
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header__link {
+  color: var(--primary-text);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Block: Reusable Button
+   ========================================================================== */
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background: var(--primary-hover);
+}
+
+.button--full-width {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Block: Hero
+   ========================================================================== */
+.hero {
+  background: var(--bg-hero);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero__title {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero__description {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Block: Features
+   ========================================================================== */
+.features {
+  padding: 80px 10%;
+  text-align: center;
+  background: var(--bg-main);
+}
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Block: Card
+   ========================================================================== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+}
+
+.card__title {
+  margin-bottom: 10px;
+}
+
+.card__description {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Block: Pricing
+   ========================================================================== */
+.pricing {
+  background: var(--bg-alt);
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.pricing__title {
+  margin-bottom: 40px;
+}
+
+.pricing__container {
+     display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Block: Pricing Card
+   ========================================================================== */
+.pricing-card {
+  background: var(--bg-card);
+  width: 280px;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing-card--selected {
+  border: 2px solid var(--primary);
+  transform: scale(1.03);
+}
+
+.pricing-card__title {
+  font-size: 1.5rem;
+}
+
+.pricing-card__price {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 20px 0;
+}
+
+.pricing-card__description {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Block: Form
+   ========================================================================== */
+.contact {
+  padding: 80px 10%;
+  text-align: center;
+  background: var(--bg-main);
+}
+
+.contact__title {
+  margin-bottom: 30px;
+}
+
+.form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  border: 1px solid var(--border-input);
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: 2px solid var(--primary);
+}
+
+.form__feedback {
+  margin-top: 15px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Block: Footer
+   ========================================================================== */
+.footer {
+  background: var(--primary);
+  color: var(--primary-text);
+  text-align: center;
+  padding: 20px;
+}

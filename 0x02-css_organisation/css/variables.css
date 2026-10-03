@@ -1,0 +1,159 @@
+/*:root {
+  --color-primary: #2563eb;
+  --color-dark: #111827;
+  --color-light: #ffffff;
+  --color-muted: #6b7280;
+  
+
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+}*/
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+/* Custom Properties (Theme Tokens) */
+:root {
+  /* Brand / Accent Colors */
+  --primary: #1e3a8a;
+  --primary-hover: #163172;
+  --primary-text: #ffffff;
+
+  /* Text Colors */
+  --text-main: #333333;
+  --text-muted: #666666;
+
+  /* Background Colors */
+  --bg-main: #ffffff;
+  --bg-alt: #f9f9f9;
+  --bg-hero: #f4f4f4;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+
+  /* Borders & Shadows */
+  --border-color: #dddddd;
+  --border-input: #cccccc;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Explicit Dark Mode Override via Attribute */
+[data-theme="dark"] {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-text: #ffffff;
+
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+
+  --bg-main: #0f172a;
+  --bg-alt: #1e293b;
+  --bg-hero: #1e293b;
+  --bg-card: #1e293b;
+  --bg-input: #334155;
+
+  --border-color: #334155;
+  --border-input: #475569;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* System Preference Dark Mode (if no data-theme attribute overrides it) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --primary-text: #ffffff;
+
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+
+    --bg-main: #0f172a;
+    --bg-alt: #1e293b;
+    --bg-hero: #1e293b;
+    --bg-card: #1e293b;
+    --bg-input: #334155;
+
+    --border-color: #334155;
+    --border-input: #475569;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Reset Styles 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-text);
+}
+
+nav a {
+  color: var(--primary-text);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: var(--bg-hero);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+}
+
